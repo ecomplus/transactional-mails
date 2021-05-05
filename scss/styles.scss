@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'functions';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap');
 
 @media (max-width: 480px) {
   .desktop-only {
@@ -22,6 +23,7 @@ body {
 
 body, p, div {
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,NotoSans,sans-serif !important;
+  font-family: 'Fira Sans', sans-serif;
   font-size: 14px;
 }
 
@@ -45,7 +47,7 @@ body a {
   background: $theme-color !important;
   color: color-yiq($theme-color) !important;
   border: none !important;
-  border-radius: 3px !important;
+  border-radius: 6px !important;
   display: inline-block !important;
   font-size: 16px !important;
   line-height: 16px !important;
