@@ -81,7 +81,7 @@
 
                                             <% order.shipping_lines.forEach(shipping => {%>
 
-                                              <% if (order.shipping_method_label && order.shipping_method_label.includes("Retirar")) { %>
+                                              <% if (order.shipping_method_label && order.shipping_method_label.includes("etirar")) { %>
                                                 <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;"
                                                   height="100%" valign="top" bgcolor="">
                                                   <div style="text-align: center;">
@@ -91,7 +91,11 @@
 
                                                       <%= i18n.available_pickup %>
                                                       <strong>
-                                                        <%= shipping.delivery_time && shipping.delivery_time.days %>
+                                                        <% if (shipping.posting_deadline && shipping.posting_deadline.days) { %>
+                                                          <%= shipping.delivery_time && shipping.delivery_time.days + shipping.posting_deadline.days %>
+                                                        <% } else { %>
+                                                          <%= shipping.delivery_time && shipping.delivery_time.days %>
+                                                        <% } %>
                                                         <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
                                                         <%= i18n.working_days %>
                                                         <% } else { %>
@@ -113,7 +117,11 @@
                                                         <a href="<%= (order.status_link) ? order.status_link : `${('https://' + store.domain || store.homepage)}/app/#/order/${order.number}/${order._id}` %>">#<%= order.number %></a>
                                                         <%= i18n.will_mail %>
                                                         <strong>
-                                                          <%= shipping.delivery_time && shipping.delivery_time.days %>
+                                                          <% if (shipping.posting_deadline && shipping.posting_deadline.days) { %>
+                                                            <%= shipping.delivery_time && shipping.delivery_time.days + shipping.posting_deadline.days %>
+                                                          <% } else { %>
+                                                            <%= shipping.delivery_time && shipping.delivery_time.days %>
+                                                          <% } %>
                                                           <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
                                                           <%= i18n.working_days %>
                                                           <% } else { %>
@@ -146,7 +154,11 @@
                                                   <%= i18n.and %>
                                                   <%= i18n.delivering_in %>
                                                   <strong>
-                                                    <%= shipping.delivery_time && shipping.delivery_time.days %>
+                                                    <% if (shipping.posting_deadline && shipping.posting_deadline.days) { %>
+                                                      <%= shipping.delivery_time && shipping.delivery_time.days + shipping.posting_deadline.days %>
+                                                    <% } else { %>
+                                                      <%= shipping.delivery_time && shipping.delivery_time.days %>
+                                                    <% } %>
                                                     <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
                                                     <%= i18n.working_days %>
                                                     <% } else { %>
