@@ -33,7 +33,7 @@ module.exports = (template, data = {}, store, lang) => {
   // https://developers.e-com.plus/docs/api/#/store/stores
   lang = lang || (store.languages && store.languages[0]) || 'pt_br'
   ecomUtils._config.set('lang', lang)
-  const themeColor = (store.brand_colors && store.brand_colors.primary) || '#6c757d'
+  const themeColor = '#00C1CC'
 
   // handle default currency by lang
   if (lang === 'pt_br') {
