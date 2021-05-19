@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/confere-stores/transactional-mails/compare/v1.10.4...v1.11.0) (2021-05-19)
+
+
+### Features
+
+* fix css ([4289886](https://github.com/confere-stores/transactional-mails/commit/4289886))
+
+
+
 ### [1.10.3](https://github.com/ecomplus/transactional-mails/compare/v1.10.2...v1.10.3) (2021-04-29)
 
 
