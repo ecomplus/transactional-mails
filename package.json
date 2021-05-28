@@ -38,7 +38,7 @@
     "docdash": "^1.2.0",
     "husky": "^4.3.8",
     "jsdoc": "^3.6.7",
-    "standard": "^14.3.4",
+    "standard": "^16.0.3",
     "standard-version": "^8.0.0"
   },
   "husky": {
