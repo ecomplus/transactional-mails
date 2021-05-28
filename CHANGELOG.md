@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.5](https://github.com/ecomplus/transactional-mails/compare/v1.10.4...v1.10.5) (2021-05-28)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#37](https://github.com/ecomplus/transactional-mails/issues/37)) ([f4d5b0c](https://github.com/ecomplus/transactional-mails/commit/f4d5b0c))
+* **msgs:** fixing some mesages ([142a92d](https://github.com/ecomplus/transactional-mails/commit/142a92d))
+
+
+
 ### [1.10.4](https://github.com/ecomplus/transactional-mails/compare/v1.10.3...v1.10.4) (2021-05-19)
 
 
