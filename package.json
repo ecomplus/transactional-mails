@@ -25,20 +25,20 @@
   },
   "homepage": "https://github.com/ecomplus/transactional-mails#readme",
   "dependencies": {
-    "@ecomplus/utils": "^1.3.4",
-    "ejs": "^3.1.2",
+    "@ecomplus/utils": "^1.4.1",
+    "ejs": "^3.1.6",
     "intl": "^1.2.5",
-    "intl-locales-supported": "^1.8.8",
+    "intl-locales-supported": "^1.8.11",
     "node-sass": "^4.14.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.14",
     "docdash": "^1.2.0",
-    "husky": "^4.2.5",
-    "jsdoc": "^3.6.4",
-    "standard": "^14.3.3",
+    "husky": "^4.3.8",
+    "jsdoc": "^3.6.7",
+    "standard": "^14.3.4",
     "standard-version": "^6.0.1"
   },
   "husky": {
