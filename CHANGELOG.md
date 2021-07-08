@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.7](https://github.com/ecomplus/transactional-mails/compare/v1.10.6...v1.10.7) (2021-07-08)
+
+
+### Bug Fixes
+
+* **deps:** replace node-sass with sass (dart-sass) ([d5c904c](https://github.com/ecomplus/transactional-mails/commit/d5c904cc70f2ad012b61234c3d17d94ea5718096))
+* **views:** better handlng items list (using `ecomUtils` for pictures) ([59699c8](https://github.com/ecomplus/transactional-mails/commit/59699c8b9124eaf85f660126e8e2f11f312c7f20))
+
 ### [1.10.6](https://github.com/ecomplus/transactional-mails/compare/v1.10.5...v1.10.6) (2021-05-29)
 
 
