@@ -7,25 +7,23 @@ const fs = require('fs')
 // https://ejs.co/
 const ejs = require('ejs')
 // compile Sass to CSS
-// https://github.com/sass/node-sass
-const sass = require('node-sass')
+// https://github.com/sass/dart-sass
+const sass = require('sass')
 // E-Com Plus utility methods
 // https://developers.e-com.plus/ecomplus-utils/
 const ecomUtils = require('@ecomplus/utils')
 
-const intl = require('intl')
-
+require('intl')
 if (global.Intl) {
-    // Determine if the built-in `Intl` has the locale data we need.
-
-        // `Intl` exists, but it doesn't have the data we need, so load the
-        // polyfill and patch the constructors we need with the polyfill's.
-        var IntlPolyfill    = require('intl');
-        Intl.NumberFormat   = IntlPolyfill.NumberFormat;
-        Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat;
+  // Determine if the built-in `Intl` has the locale data we need.
+  // `Intl` exists, but it doesn't have the data we need, so load the
+  // polyfill and patch the constructors we need with the polyfill's.
+  const IntlPolyfill = require('intl')
+  Intl.NumberFormat = IntlPolyfill.NumberFormat
+  Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat
 } else {
-    // No `Intl`, so use and load the polyfill.
-    global.Intl = require('intl');
+  // No `Intl`, so use and load the polyfill.
+  global.Intl = require('intl')
 }
 
 module.exports = (template, data = {}, store, lang) => {
@@ -57,7 +55,7 @@ module.exports = (template, data = {}, store, lang) => {
       }
 
       // render Sass to CSS with theme color
-      const scss = path.join(__dirname, `../../scss/styles.scss`)
+      const scss = path.join(__dirname, '../../scss/styles.scss')
       fs.readFile(scss, 'utf8', (err, contents) => {
         if (err) {
           return reject(err)
@@ -68,7 +66,7 @@ module.exports = (template, data = {}, store, lang) => {
         // render Sass
         sass.render({
           data: scssString,
-          includePaths: [ path.join(__dirname, '../../scss') ]
+          includePaths: [path.join(__dirname, '../../scss')]
         }, (err, result) => {
           if (err) {
             // SCSS error
