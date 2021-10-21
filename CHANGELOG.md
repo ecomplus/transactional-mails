@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.8](https://github.com/ecomplus/transactional-mails/compare/v1.10.7...v1.10.8) (2021-10-21)
+
+
+### Bug Fixes
+
+* **view/new_order:** undefined days on shipping line ([29da1b7](https://github.com/ecomplus/transactional-mails/commit/29da1b72b8a24375d434db241aad74a752204226))
+
 ### [1.10.7](https://github.com/ecomplus/transactional-mails/compare/v1.10.6...v1.10.7) (2021-07-08)
 
 
