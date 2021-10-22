@@ -474,7 +474,7 @@
                                                                 <%= i18n.available_pickup %>
                                                                 <strong>
                                                                   <% if (shipping.posting_deadline) { %>
-                                                                    <%= (shipping.delivery_time ? : (shipping.delivery_time.days + shipping.posting_deadline.days) : shipping.posting_deadline.days) %>
+                                                                    <%= (shipping.delivery_time ? (shipping.delivery_time.days + shipping.posting_deadline.days) : shipping.posting_deadline.days) %>
                                                                   <% } else if(shipping.delivery_time) { %>
                                                                     <%= shipping.delivery_time.days %>
                                                                   <% } %>
@@ -491,7 +491,7 @@
                                                                 <%= i18n.will_mail %>
                                                                 <strong>
                                                                   <% if (shipping.posting_deadline) { %>
-                                                                    <%= (shipping.delivery_time ? : (shipping.delivery_time.days + shipping.posting_deadline.days) : shipping.posting_deadline.days) %>
+                                                                    <%= (shipping.delivery_time ? (shipping.delivery_time.days + shipping.posting_deadline.days) : shipping.posting_deadline.days) %>
                                                                   <% } else if(shipping.delivery_time) { %>
                                                                     <%= shipping.delivery_time.days %>
                                                                   <% } %>
@@ -528,7 +528,7 @@
                                                               <%= i18n.available_pickup %>
                                                               <strong>
                                                                 <% if (shipping.posting_deadline) { %>
-                                                                  <%= (shipping.delivery_time ? : (shipping.delivery_time.days + shipping.posting_deadline.days) : shipping.posting_deadline.days) %>
+                                                                  <%= (shipping.delivery_time ? (shipping.delivery_time.days + shipping.posting_deadline.days) : shipping.posting_deadline.days) %>
                                                                 <% } else if(shipping.delivery_time) { %>
                                                                   <%= shipping.delivery_time.days %>
                                                                 <% } %>
@@ -538,13 +538,13 @@
                                                                   <%= i18n.days %>
                                                                 <% } %>
                                                               </strong>
-                                                            <% } else if (order.shipping_method_label && order.shipping_method_label.toLowerCase().includes("mail")) {
+                                                            <% } else if (order.shipping_method_label && order.shipping_method_label.toLowerCase().includes("mail")) { %>
                                                               <%= i18n.order %>
                                                               <a href="<%= (order.status_link) ? order.status_link : `${('https://' + store.domain || store.homepage)}/app/#/order/${order.number}/${order._id}` %>">#<%= order.number %></a>
                                                               <%= i18n.will_mail %>
                                                               <strong>
                                                                 <% if (shipping.posting_deadline) { %>
-                                                                  <%= (shipping.delivery_time ? : (shipping.delivery_time.days + shipping.posting_deadline.days) : shipping.posting_deadline.days) %>
+                                                                  <%= (shipping.delivery_time ? (shipping.delivery_time.days + shipping.posting_deadline.days) : shipping.posting_deadline.days) %>
                                                                 <% } else if(shipping.delivery_time) { %>
                                                                   <%= shipping.delivery_time.days %>
                                                                 <% } %>
