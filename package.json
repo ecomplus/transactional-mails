@@ -1,6 +1,6 @@
 {
   "name": "@confere-stores/transactional-mails",
-  "version": "1.11.2",
+  "version": "1.11.3",
   "description": "Default transactional email templates for E-Com Plus stores",
   "main": "src/index.js",
   "scripts": {
