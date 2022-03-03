@@ -36,7 +36,12 @@
           "alt": "caixa-de-som-edifier-20-r1000t4-preta"
         }
       },
-      "quantity": 1,
+      "production_time": {
+        "days": 3,
+        "working_days": true,
+        "cumulative": true
+      },
+      "quantity": 2,
       "sku": "cx-ed-1052",
       "name": "Caixa de Som  2.0 Bivolt (24W) R1000T4",
       "price": 367.26,
@@ -69,17 +74,17 @@
         "name": "Matheus",
         "city": "Belo Horizonte"
       },
-      "price": 21,
+      "price": 10.54,
       "declared_value": 367.26,
       "declared_value_price": 6.94,
       "own_hand": false,
-      "own_hand_price": 0,
+      "own_hand_price": 10.44,
       "receipt": false,
       "receipt_price": 0,
       "discount": 0,
       "total_price": 27.94,
       "delivery_time": {
-        "days": 8,
+        "days": 1,
         "working_days": true
       },
       "posting_deadline": {
@@ -96,8 +101,8 @@
       }
     }
   ],
-  "shipping_method_label": "PAC",
-  "payment_method_label": "Boleto bancário",
+  "shipping_method_label": "Retirar",
+  "payment_method_label": "Retirar na Loja",
   "staff_signature": false,
   "source_name": "Web",
   "channel_type": "ecommerce",

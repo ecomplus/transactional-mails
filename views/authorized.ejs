@@ -119,9 +119,38 @@ if (order.status_link) {
                                                         <%= order.number %>
                                                       </a>
 
+                                                      <%
+                                                        // Default plugin working days config
+                                                        let ownHandAvaliable = (shipping.delivery_time && shipping.delivery_time.days)
+                                                        
+                                                        // Product production time per item
+                                                        let productionTime = order.items.map(itm => {
+                                                          if (itm.production_time && itm.production_time.days) {
+                                                            return {
+                                                              days: itm.production_time.cumulative ? itm.production_time.days * itm.quantity : itm.production_time.days,
+                                                              cumulative: itm.production_time.cumulative,
+                                                              working_days: itm.production_time.working_days
+                                                            }
+                                                          }
+                                                          return {
+                                                            days: 0,
+                                                            cumulative: false,
+                                                            working_days: false
+                                                          }
+                                                        })
+
+                                                        // Retrieve the highest production time
+                                                        let productionTotal = productionTime.reduce((ac, cv) => {
+                                                          return (cv.days > ac) ? cv.days : ac
+                                                        } , 0)
+
+                                                        // Final shipping deadline
+                                                        let ownHandDeliveryDays = (ownHandAvaliable + productionTotal)
+                                                      %> 
+
                                                       <%= i18n.available_pickup %>
                                                       <strong>
-                                                        <%= shipping.delivery_time && shipping.delivery_time.days %>
+                                                        <%= ownHandDeliveryDays %>
                                                         <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
                                                         <%= i18n.working_days %>
                                                         <% } else { %>
