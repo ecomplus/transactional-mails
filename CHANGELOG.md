@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/ecomplus/transactional-mails/compare/v1.10.10...v1.11.0) (2022-09-01)
+
+
+### Features
+
+* **mails:** customizing mesage for same day delieries ([36f1237](https://github.com/ecomplus/transactional-mails/commit/36f1237cecc38773d5d6d63c9e3b67cd6a160e1a))
+
 ### [1.10.10](https://github.com/ecomplus/transactional-mails/compare/v1.10.9...v1.10.10) (2022-09-01)
 
 ### [1.10.9](https://github.com/ecomplus/transactional-mails/compare/v1.10.8...v1.10.9) (2021-10-22)
