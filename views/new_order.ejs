@@ -501,16 +501,48 @@
                                                                     <%= i18n.days %>
                                                                   <% } %>
                                                                 </strong>
-                                                                <%= i18n.after_payment %>                                                              
+                                                                <%= i18n.after_payment %>
+                                                                <% } else if (shipping.delivery_time.days == 0 ) { %>
+                                                                  <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;"
+                                                                    height="100%" valign="top" bgcolor="">
+                                                                    <div style="text-align: center;">
+                                                                      <font color="#333333">
+                                                                        <%= i18n.order %>
+                                                                        <a href="<%= (order.status_link) ? order.status_link : `${('https://' + store.domain || store.homepage)}/app/#/order/${order.number}/${order._id}` %>">#<%= order.number %></a>
+
+                                                                        <strong><%= i18n.delivering_today %></strong>
+
+                                                                        <%= i18n.on_following_address %>
+
+                                                                        <br>
+
+                                                                        <div style="text-align: center;">
+                                                                          <font color="#333333"><%= shipping.to && shipping.to.street %>, nº
+                                                                            <%= shipping.to.number %></font>
+                                                                        </div>
+                                                                        <div style="text-align: center;">
+                                                                          <font color="#333333"><%= shipping.to && shipping.to.city %>,
+                                                                            <%= shipping.to && shipping.to.province_code %>,
+                                                                            <%= shipping.to && shipping.to.zip %></font>
+                                                                        </div>
+                                                                        <div style="text-align: center;">
+                                                                          <font color="#333333"><%= i18n.shipped_by %>
+                                                                            <%= shipping.app && shipping.app.carrier %>
+                                                                          </font>
+                                                                        </div>
+                                                                      </font>
+                                                                    </div>
+                                                                  </td>                                                              
                                                               <% } else { %>
+
                                                                 <%= i18n.order %>
                                                                 <a href="<%= (order.status_link) ? order.status_link : `${('https://' + store.domain || store.homepage)}/app/#/order/${order.number}/${order._id}` %>">#<%= order.number %></a>
                                                                 <%= i18n.delivering_in %>
                                                                 <strong>
                                                                 <% if (shipping.delivery_time) { %>
-                                                                  <%= (shipping.posting_deadline ? (shipping.delivery_time.days + shipping.posting_deadline.days) : shipping.delivery_time.days) %>                                 
+                                                                  <%= (shipping.posting_deadline ? (shipping.delivery_time.days + shipping.posting_deadline.days) : shipping.delivery_time.days) %>
                                                                 <% } else if(shipping.posting_deadline) { %>
-                                                                  <%= shipping.posting_deadline.days %> 
+                                                                  <%= shipping.posting_deadline.days %>
                                                                 <% } %>
                                                                 <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
                                                                   <%= i18n.working_days %>
@@ -560,9 +592,9 @@
                                                                 <%= i18n.delivering_in %>
                                                                 <strong>
                                                                   <% if (shipping.delivery_time) { %>
-                                                                    <%= (shipping.posting_deadline ? (shipping.delivery_time.days + shipping.posting_deadline.days) : shipping.delivery_time.days) %>                                 
+                                                                    <%= (shipping.posting_deadline ? (shipping.delivery_time.days + shipping.posting_deadline.days) : shipping.delivery_time.days) %>
                                                                   <% } else if(shipping.posting_deadline) { %>
-                                                                    <%= shipping.posting_deadline.days %> 
+                                                                    <%= shipping.posting_deadline.days %>
                                                                   <% } %>
                                                                   <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
                                                                     <%= i18n.working_days %>
