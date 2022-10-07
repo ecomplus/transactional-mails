@@ -91,7 +91,12 @@
                                               </h2>
                                               <% } else { %>
                                               <h2><span style="color:#333333;"><%= i18n.hello %>
-                                                  <%= customer.name && customer.name.given_name %>, <%= i18n.shipped_title %></span></h2>
+                                                  <%= customer.name && customer.name.given_name %>, 
+                                                  <% if (order.shipping_method_label && order.shipping_method_label.includes("Retirar")) { %>
+                                                    <%= i18n.shipped_title_pickup %>
+                                                  <% } else { %>
+                                                  <%= i18n.shipped_title %>
+                                                  <% } %> </span></h2>
                                               <% } %>
                                             </td>
                                           </tr>
@@ -137,35 +142,46 @@
                                               <% } %>
 
                                               <div style="text-align: center;">
-                                                <font color="#333333"> <%= i18n.shipped_text %>
-                                                  <%= i18n.delivering_in %> <strong> <%= shipping.delivery_time.days %>
+                                                <font color="#333333">
+                                                  <% if (order.shipping_method_label && order.shipping_method_label.includes("Retirar")) { %>
+                                                    <%= i18n.shipped_text_pickup %>
+                                                  <% } else { %>
+                                                  <%= i18n.shipped_text %> <%= i18n.delivering_in %>
+                                                  <% } %>
+                                                   <strong> <%= shipping.delivery_time.days %>
                                                     <% if (shipping.delivery_time.working_days) { %>
-                                                    <%= i18n.working_days %> <% } else{ %> <%= i18n.days %>
-                                                    <% } %></strong> <%= i18n.on_following_address %> </font>
+                                                    <%= i18n.working_days %> <% } else { %> <%= i18n.days %>
+                                                    <% } %></strong> 
+                                                    <br>
+                                                  <% if (shipping.delivery_instructions) { %>
+                                                    <strong><%= shipping.delivery_instructions %></strong>
+                                                 <% } %>
+                                                 <% if (order.shipping_method_label && !order.shipping_method_label.includes("Retirar")) { %>
+                                                    <%= i18n.on_following_address %>
+                                                 <% } %>
+                                                </font>
                                               </div>
 
                                               <br>
 
-
-                                            <div style="text-align: center;">
-                                              <font color="#333333"><%= shipping.to && shipping.to.street %>, nº
-                                                <%= shipping.to.number %></font>
-                                            </div>
-                                            <div style="text-align: center;">
-                                              <font color="#333333"><%= shipping.to && shipping.to.city %>,
-                                                <%= shipping.to && shipping.to.province_code %>,
-                                                <%= shipping.to && shipping.to.zip %></font>
-                                            </div>
-                                            <div style="text-align: center;">
-                                              <font color="#333333"><%= i18n.shipped_by %>
-                                                <%= shipping.app && shipping.app.carrier %>
-                                              </font>
-                                            </div>
-
+                                            <% if (order.shipping_method_label && !order.shipping_method_label.includes("Retirar")) { %>
+                                              <div style="text-align: center;">
+                                                <font color="#333333"><%= shipping.to && shipping.to.street %>, nº
+                                                  <%= shipping.to.number %></font>
+                                              </div>
+                                              <div style="text-align: center;">
+                                                <font color="#333333"><%= shipping.to && shipping.to.city %>,
+                                                  <%= shipping.to && shipping.to.province_code %>,
+                                                  <%= shipping.to && shipping.to.zip %></font>
+                                              </div>
+                                              <div style="text-align: center;">
+                                                <font color="#333333"><%= i18n.shipped_by %>
+                                                  <%= shipping.app && shipping.app.carrier %>
+                                                </font>
+                                              </div>               
+                                            <% } %>
                                             </td>
-
                                             <% }) %>
-
                                           </tr>
                                         </tbody>
                                       </table>
