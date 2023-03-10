@@ -109,18 +109,6 @@
                                                 <%= i18n.order %>
                                                 <a href="<%= (order.status_link) ? order.status_link : `${('https://' + store.domain || store.homepage)}/app/#/order/${order.number}/${order._id}` %>">#<%= order.number %></a>
                                                 <%= i18n.will_mail %>
-                                                <strong>
-                                                  <% if (shipping.posting_deadline && shipping.posting_deadline.days) { %>
-                                                    <%= shipping.delivery_time && shipping.delivery_time.days + shipping.posting_deadline.days %>
-                                                  <% } else { %>
-                                                    <%= shipping.delivery_time && shipping.delivery_time.days %>
-                                                  <% } %>
-                                                  <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
-                                                  <%= i18n.working_days %>
-                                                  <% } else { %>
-                                                  <%= i18n.days %>
-                                                  <% } %>
-                                                </strong>
                                               </font>
                                             </div>
                                           </td>
