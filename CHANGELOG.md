@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/ecomplus/transactional-mails/compare/v1.11.5...v2.0.0) (2023-03-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** no more node 10 support with newer sass version
+
+### Bug Fixes
+
+* **deps:** bump all dependencies, audit fix ([bd53949](https://github.com/ecomplus/transactional-mails/commit/bd539491602175daff6a6362b69ac195cdd280bb))
+
 ### [1.11.5](https://github.com/ecomplus/transactional-mails/compare/v1.11.4...v1.11.5) (2023-03-18)
 
 ### [1.11.4](https://github.com/ecomplus/transactional-mails/compare/v1.11.1...v1.11.4) (2023-03-18)
