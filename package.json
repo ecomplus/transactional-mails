@@ -26,25 +26,20 @@
   "homepage": "https://github.com/ecomplus/transactional-mails#readme",
   "dependencies": {
     "@ecomplus/utils": "^1.4.1",
-    "ejs": "^3.1.6",
+    "ejs": "^3.1.9",
     "intl": "^1.2.5",
-    "intl-locales-supported": "^1.8.11",
-    "sass": "1.35.2"
+    "intl-locales-supported": "1.8.11 || ^1.8.13",
+    "sass": "^1.59.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
-    "browser-sync": "^2.27.4",
-    "docdash": "^1.2.0",
-    "husky": "^4.3.8",
-    "jsdoc": "^3.6.7",
-    "standard": "^16.0.3",
-    "standard-version": "^9.3.0"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "browser-sync": "^2.29.0",
+    "docdash": "^2.0.1",
+    "husky": "^8.0.3",
+    "jsdoc": "^4.0.2",
+    "standard": "^17.0.0",
+    "standard-version": "^9.5.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/",
