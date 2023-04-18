@@ -103,6 +103,15 @@
                                                         <% } %>
                                                       </strong>
                                                       <%= i18n.after_payment %>
+                                                      <% if (shipping.delivery_instructions) { %>
+                                                        <%= i18n.on_following_address %>
+                                                        <br>
+                                                        <div style="text-align: center;">
+                                                          <font color="#333333">
+                                                            <%= shipping.delivery_instructions %>
+                                                          </font>
+                                                        </div>
+                                                      <% } %>
                                                     </font>
                                                   </div>
                                                 </td>
