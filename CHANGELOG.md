@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/ecomplus/transactional-mails/compare/v2.0.0...v2.0.1) (2023-04-18)
+
+
+### Bug Fixes
+
+* **templates:** insert correct information about pickup ([ca8ec57](https://github.com/ecomplus/transactional-mails/commit/ca8ec57aa6d71ee846708f83fec1afc7732b126d))
+
 ## [2.0.0](https://github.com/ecomplus/transactional-mails/compare/v1.11.5...v2.0.0) (2023-03-19)
 
 
