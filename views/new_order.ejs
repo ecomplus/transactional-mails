@@ -485,6 +485,15 @@
                                                                   <% } %>
                                                                 </strong>
                                                                 <%= i18n.after_payment %>
+                                                                <% if (shipping.delivery_instructions) { %>
+                                                                  <%= i18n.on_following_address %>
+                                                                  <br>
+                                                                  <div style="text-align: center;">
+                                                                    <font color="#333333">
+                                                                      <%= shipping.delivery_instructions %>
+                                                                    </font>
+                                                                  </div>
+                                                                <% } %>
                                                               <% } else if (order.shipping_method_label && order.shipping_method_label.toLowerCase().includes("mail")) { %>
                                                                 <%= i18n.order %>
                                                                 <a href="<%= (order.status_link) ? order.status_link : `${('https://' + store.domain || store.homepage)}/app/#/order/${order.number}/${order._id}` %>">#<%= order.number %></a>
@@ -570,6 +579,15 @@
                                                                   <%= i18n.days %>
                                                                 <% } %>
                                                               </strong>
+                                                              <% if (shipping.delivery_instructions) { %>
+                                                                <%= i18n.on_following_address %>
+                                                                <br>
+                                                                <div style="text-align: center;">
+                                                                  <font color="#333333">
+                                                                    <%= shipping.delivery_instructions %>
+                                                                  </font>
+                                                                </div>
+                                                              <% } %>
                                                             <% } else if (order.shipping_method_label && order.shipping_method_label.toLowerCase().includes("mail")) { %>
                                                               <%= i18n.order %>
                                                               <a href="<%= (order.status_link) ? order.status_link : `${('https://' + store.domain || store.homepage)}/app/#/order/${order.number}/${order._id}` %>">#<%= order.number %></a>

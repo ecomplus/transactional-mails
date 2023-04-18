@@ -74,7 +74,12 @@ if (order.status_link) {
                                               <% } else { %>
                                               <h2><span style="color:#333333;"><%= i18n.hello %>
                                                   <%= customer.name && customer.name.given_name %>,
-                                                  <%= i18n.delivered_title %></span>
+                                                  <% if (order.shipping_method_label && order.shipping_method_label.toLowerCase().includes("retir")) { %>
+                                                    <%= i18n.delivered_pikup_title %>
+                                                  <% } else { %>
+                                                    <%= i18n.delivered_title %>
+                                                  <% } %>
+                                                </span>
                                               </h2>
                                               <% } %>
                                             </td>
@@ -93,17 +98,19 @@ if (order.status_link) {
                                             <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;"
                                               height="100%" valign="top" bgcolor="">
 
-                                              <div style="text-align: center;">
-                                                <font color="#333333"> <%= i18n.delivered_text %> </font>
-                                              </div>
-
-                                              <br>
-                                              <% if (order.shipping_method_label && order.shipping_method_label.includes("Retirar")) { %>
-                                              <div style="text-align: center;">
-                                                <font color="#333333">
-                                                  <%= i18n.pickedup %></font>
-                                              </div>
-
+                                              <% if (order.shipping_method_label && order.shipping_method_label.toLowerCase().includes("retir")) { %>
+                                                <div style="text-align: center;">
+                                                  <font color="#333333"> <%= i18n.delivered_pikup_text %> </font>
+                                                </div>
+                                                <% if (shipping.delivery_instructions) { %>
+                                                  <div style="text-align: center;">
+                                                    <%= i18n.on_following_address %>
+                                                    <br>
+                                                    <font color="#333333">
+                                                      <%= shipping.delivery_instructions %>
+                                                    </font>
+                                                  </div>
+                                                <% } %>
                                               <% } else if (order.shipping_method_label && order.shipping_method_label.includes("mail")) { %>
 
                                               <div style="text-align: center;">
@@ -119,23 +126,23 @@ if (order.status_link) {
 
 
                                               <% } else { %>
-                                              <div style="text-align: center;">
-                                                <font color="#333333"><%= shipping.to && shipping.to.street %>, nº
-                                                  <%= shipping.to.number %></font>
-                                              </div>
-                                              <div style="text-align: center;">
-                                                <font color="#333333"><%= shipping.to && shipping.to.city %>,
-                                                  <%= shipping.to && shipping.to.province_code %>,
-                                                  <%= shipping.to && shipping.to.zip %></font>
-                                              </div>
-                                              <div style="text-align: center;">
-                                                <font color="#333333"><%= i18n.shipped_by %>
-                                                  <%= shipping.app && shipping.app.carrier %>
-                                                </font>
-                                              </div>
-
-
-
+                                                <div style="text-align: center;">
+                                                  <font color="#333333"> <%= i18n.delivered_text %> </font>
+                                                </div>
+                                                <div style="text-align: center;">
+                                                  <font color="#333333"><%= shipping.to && shipping.to.street %>, nº
+                                                    <%= shipping.to.number %></font>
+                                                </div>
+                                                <div style="text-align: center;">
+                                                  <font color="#333333"><%= shipping.to && shipping.to.city %>,
+                                                    <%= shipping.to && shipping.to.province_code %>,
+                                                    <%= shipping.to && shipping.to.zip %></font>
+                                                </div>
+                                                <div style="text-align: center;">
+                                                  <font color="#333333"><%= i18n.shipped_by %>
+                                                    <%= shipping.app && shipping.app.carrier %>
+                                                  </font>
+                                                </div>
                                               <% } }) %>
                                             </td>
                                           </tr>
