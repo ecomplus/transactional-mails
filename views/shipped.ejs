@@ -90,13 +90,19 @@
                                                   style="color:#333333;"><%= custom_message.replace(/{name}/g, ecomUtils.nickname(customer)) %></span>
                                               </h2>
                                               <% } else { %>
-                                              <h2><span style="color:#333333;"><%= i18n.hello %>
+                                                <h2>
+                                                <span style="color:#333333;">
+                                                  <%= i18n.hello %>
                                                   <%= customer.name && customer.name.given_name %>, 
-                                                  <% if (order.shipping_method_label && order.shipping_method_label.includes("Retirar")) { %>
+                                                  <% if (order.shipping_method_label && order.shipping_method_label.includes("Retirar") && order.shipping_lines && order.shipping_lines.length && order.shipping_lines[0].delivery_time && order.shipping_lines[0].delivery_time.days === 0) { %>
+                                                    <%= i18n.delivered_pikup_title %>
+                                                  <% } else if (order.shipping_method_label && order.shipping_method_label.includes("Retirar")) { %>
                                                     <%= i18n.shipped_title_pickup %>
                                                   <% } else { %>
-                                                  <%= i18n.shipped_title %>
-                                                  <% } %> </span></h2>
+                                                    <%= i18n.shipped_title %>
+                                                  <% } %>
+                                                </span>
+                                                </h2>
                                               <% } %>
                                             </td>
                                           </tr>
@@ -143,15 +149,25 @@
 
                                               <div style="text-align: center;">
                                                 <font color="#333333">
-                                                  <% if (order.shipping_method_label && order.shipping_method_label.includes("Retirar")) { %>
+                                                  <% if (order.shipping_method_label && order.shipping_method_label.includes("Retirar") && shipping.delivery_time && shipping.delivery_time.days === 0) { %>
+                                                    <%= i18n.delivered_pikup_text_msg %>
+                                                  <% } else if (order.shipping_method_label && order.shipping_method_label.includes("Retirar")) { %>
                                                     <%= i18n.shipped_text_pickup %>
                                                   <% } else { %>
-                                                  <%= i18n.shipped_text %> <%= i18n.delivering_in %>
+                                                    <%= i18n.shipped_text %> <%= i18n.delivering_in %>
                                                   <% } %>
-                                                   <strong> <%= shipping.delivery_time.days %>
-                                                    <% if (shipping.delivery_time.working_days) { %>
-                                                    <%= i18n.working_days %> <% } else { %> <%= i18n.days %>
-                                                    <% } %></strong> 
+                                                   <strong>
+                                                      <% if (shipping.delivery_time && shipping.delivery_time.days) { %>
+                                                        <%= shipping.delivery_time.days %>
+                                                        <% if (shipping.delivery_time && shipping.delivery_time.working_days && shipping.delivery_time.working_days && shipping.delivery_time.days > 1) { %>
+                                                          <%= i18n.working_days %>
+                                                        <% } else if (shipping.delivery_time && shipping.delivery_time.working_days && shipping.delivery_time.working_days && shipping.delivery_time.days === 1) { %>
+                                                          <%= i18n.working_day %>
+                                                        <% } %>
+                                                      <% } else if (shipping.delivery_time.days === 0) { %>
+                                                        <%= i18n.today %>
+                                                      <% } %>
+                                                    </strong> 
                                                     <br>
                                                   <% if (shipping.delivery_instructions) { %>
                                                     <strong><%= shipping.delivery_instructions %></strong>
