@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/ecomplus/transactional-mails/compare/v2.0.0...v2.0.1) (2023-08-29)
+
+
+### Bug Fixes
+
+* properly checking promotional prices ([2982dd1](https://github.com/ecomplus/transactional-mails/commit/2982dd1e57963e24cc9a26adc659dcab126e5001))
+
 ## [2.0.0](https://github.com/ecomplus/transactional-mails/compare/v1.11.5...v2.0.0) (2023-03-19)
 
 
