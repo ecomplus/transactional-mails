@@ -86,14 +86,14 @@
                                               height="100%" bgcolor="">
                                               <h1 style="padding-bottom: 10px;"><span style="color:#333333;">
                                                   <%= ecomUtils.name(product) %></span></h1>
-                                              <% if (product.base_price) { %>
+                                              <% if (ecomUtils.onPromotion(product)) { %>
                                               <div><span style="color:#333333;">
                                                   <p>de <%= ecomUtils.formatMoney(product.base_price) %> </p>
                                                 </span>
                                               </div>
                                               <h2><span style="color:#333333;">por
                                                   <%= ecomUtils.formatMoney(product.price) %></span></h2>
-                                              <% } else{ %>
+                                              <% } else { %>
                                               <h2><span style="color:#333333;">
                                                   <%= ecomUtils.formatMoney(ecomUtils.price(product)) %></span></h2>
                                               <% } %>
