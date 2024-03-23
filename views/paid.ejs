@@ -151,7 +151,7 @@
                                               <%= i18n.order %>
                                               <a href="<%= (order.status_link) ? order.status_link : `${('https://' + store.domain || store.homepage)}/app/#/order/${order.number}/${order._id}` %>">#<%= order.number %></a>
 
-                                              <strong><%= i18n.delivering_today %></strong>
+                                              <strong><%= i18n.delivering_until_tomorrow %></strong>
 
                                               <%= i18n.on_following_address %>
 
