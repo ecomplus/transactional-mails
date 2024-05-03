@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.4](https://github.com/ecomplus/transactional-mails/compare/v2.0.3...v2.0.4) (2024-05-03)
+
+
+### Bug Fixes
+
+* supress scss deprecation warning using calc for division ([989073c](https://github.com/ecomplus/transactional-mails/commit/989073c4bc5d9a18b6d70037c47135222f34e058))
+
 ### [2.0.3](https://github.com/ecomplus/transactional-mails/compare/v2.0.2...v2.0.3) (2024-03-23)
 
 
