@@ -26,18 +26,18 @@
   "homepage": "https://github.com/ecomplus/transactional-mails#readme",
   "dependencies": {
     "@ecomplus/utils": "^1.4.1",
-    "ejs": "^3.1.9",
+    "ejs": "^3.1.10",
     "intl": "^1.2.5",
-    "intl-locales-supported": "1.8.11 || ^1.8.13",
-    "sass": "^1.66.1"
+    "intl-locales-supported": "1.8.11 || ^1.8.13 || ^1.8.11",
+    "sass": "^1.77.6"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
     "browser-sync": "^2.29.3",
-    "docdash": "^2.0.1",
+    "docdash": "^2.0.2",
     "husky": "^8.0.3",
-    "jsdoc": "^4.0.2",
+    "jsdoc": "^4.0.3",
     "standard": "^17.1.0",
     "standard-version": "^9.5.0"
   },
