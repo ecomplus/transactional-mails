@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/ecomplus/transactional-mails/compare/v2.0.4...v2.1.0) (2024-09-18)
+
+
+### Features
+
+* adding delivery_instructions when buyer is picking up ([0f8d900](https://github.com/ecomplus/transactional-mails/commit/0f8d900789a017f1d26870549249a2670a733dd8))
+
 ### [2.0.4](https://github.com/ecomplus/transactional-mails/compare/v2.0.3...v2.0.4) (2024-05-03)
 
 
