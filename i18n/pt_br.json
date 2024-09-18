@@ -117,11 +117,12 @@
   "stock_title": "O produto que deseja está em estoque",
   "promo_title": "O produto que deseja está em promoção",
   "product_cta": "Visualizar o produto",
-  "available_pickup": "estará disponível para a retirada em nossa loja em",
+  "available_pickup": "estará disponível para a retirada no seguinte endereço:",
   "pickedup": "Retirado em nossa loja",
-  "pickup": "está disponível para a retirada em nossa loja.",
+  "pickup": "está disponível para a retirada no seguinte endereço:",
   "and": "e",
   "will_mail": "será enviado para seu e-mail em",
   "sent_mail": "foi enviado para seu e-mail",
-  "soon": "breve"
+  "soon": "breve",
+  "in": "em"
 }

@@ -1,217 +1,299 @@
 {
+  "opened_at": "2024-09-18T18:33:46.208Z",
   "buyers": [
     {
-      "main_email": "matheus@e-com.club",
-      "display_name": "Matheus",
+      "_id": "663694f232d4fe4710f02a73",
+      "main_email": "vitorrggm@gmail.com",
+      "display_name": "vitor",
       "name": {
-        "given_name": "Matheus",
-        "family_name": "Guedes"
+        "given_name": "Vitor",
+        "family_name": "Gonçalves",
+        "middle_name": "Rocha"
       },
-      "gender": "m",
-      "photos": []
+      "photos": [],
+      "phones": [
+        {
+          "number": "31994720048"
+        }
+      ],
+      "registry_type": "j",
+      "doc_number": "24356660000178"
     }
   ],
   "items": [
     {
-      "product_id": "5c70168cc626be23430d4fd9",
+      "quantity": 6,
+      "product_id": "66a8a4b186679971c62d4e34",
       "picture": {
         "zoom": {
-          "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/@1550849536126-caixa-de-som-edifier-20-r1000t4-preta.jpg",
-          "size": "410x410",
-          "alt": "caixa-de-som-edifier-20-r1000t4-preta"
-        },
-        "small": {
-          "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/100px/@1550849536126-caixa-de-som-edifier-20-r1000t4-preta.jpg",
-          "size": "100x100",
-          "alt": "caixa-de-som-edifier-20-r1000t4-preta"
-        },
-        "normal": {
-          "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/400px/@1550849536126-caixa-de-som-edifier-20-r1000t4-preta.jpg",
-          "size": "400x400",
-          "alt": "caixa-de-som-edifier-20-r1000t4-preta"
+          "url": "https://ecoms1.com/51491/@v3/1725562227219-corante-lipossoluvel-premium-verde-musgo-10gr-iceberg.jpg",
+          "size": "467x635"
         },
         "big": {
-          "url": "https://ecom-ptqgjveg.nyc3.digitaloceanspaces.com/imgs/700px/@1550849536126-caixa-de-som-edifier-20-r1000t4-preta.jpg",
-          "size": "700x700",
-          "alt": "caixa-de-som-edifier-20-r1000t4-preta"
+          "url": "https://ecoms1.com/51491/imgs/big/@v3/1725562227219-corante-lipossoluvel-premium-verde-musgo-10gr-iceberg.jpg.avif",
+          "size": "467x635"
+        },
+        "normal": {
+          "url": "https://ecoms1.com/51491/imgs/normal/@v3/1725562227219-corante-lipossoluvel-premium-verde-musgo-10gr-iceberg.jpg.avif",
+          "size": "467x635"
         }
       },
+      "sku": "102151",
+      "name": "Corante Lipossolúvel Premium Verde Musgo 10gr Iceberg",
+      "price": 9.472352999999998,
+      "final_price": 9.472352999999998,
+      "_id": "e544847a1726684426172111",
+      "stock_status": "released"
+    },
+    {
+      "quantity": 4,
+      "product_id": "66a84f0a86679971c62d1621",
+      "picture": {
+        "zoom": {
+          "url": "https://ecoms1.com/51491/@v3/1725256098056-massa-pronta-brigadeiro-2.57kg-nestle.jpg",
+          "size": "498x745"
+        },
+        "big": {
+          "url": "https://ecoms1.com/51491/imgs/big/@v3/1725256098056-massa-pronta-brigadeiro-2.57kg-nestle.jpg.avif",
+          "size": "498x745"
+        },
+        "normal": {
+          "url": "https://ecoms1.com/51491/imgs/normal/@v3/1725256098056-massa-pronta-brigadeiro-2.57kg-nestle.jpg.avif",
+          "size": "498x745"
+        }
+      },
+      "sku": "153040",
+      "name": "Massa Pronta Brigadeiro 2.57Kg Nestlé",
+      "price": 123.38,
+      "final_price": 123.38,
+      "_id": "e809883a1726684426194111",
+      "stock_status": "released"
+    },
+    {
       "quantity": 1,
-      "sku": "cx-ed-1052",
-      "name": "Caixa de Som  2.0 Bivolt (24W) R1000T4",
-      "price": 367.26,
-      "final_price": 367.26,
-      "_id": "e15934561066801111111111"
+      "product_id": "66a9e2ce86679971c62f0f18",
+      "picture": {
+        "zoom": {
+          "url": "https://ecoms1.com/51491/@v3/1722726736425-corante-soft-gel-verde-seco-60g-mago.jpg",
+          "size": "154x689"
+        },
+        "big": {
+          "url": "https://ecoms1.com/51491/imgs/big/@v3/1722726736425-corante-soft-gel-verde-seco-60g-mago.jpg.avif",
+          "size": "154x689"
+        },
+        "normal": {
+          "url": "https://ecoms1.com/51491/imgs/normal/@v3/1722726736425-corante-soft-gel-verde-seco-60g-mago.jpg.avif",
+          "size": "154x689"
+        }
+      },
+      "sku": "102699",
+      "name": "Corante Soft Gel Verde Seco 60g Mago",
+      "price": 4.28706,
+      "final_price": 4.28706,
+      "_id": "e472545a1726684426208111",
+      "stock_status": "released"
+    },
+    {
+      "quantity": 1,
+      "flags": [
+        "freebie",
+        "__tmp"
+      ],
+      "product_id": "66be47c486679971c6465b19",
+      "picture": {
+        "zoom": {
+          "url": "https://ecoms1.com/51491/@v3/1723746264991-brinde.png",
+          "size": "352x328",
+          "alt": "brinde"
+        },
+        "big": {
+          "url": "https://ecoms1.com/51491/imgs/big/@v3/1723746264991-brinde.png.avif",
+          "size": "352x328",
+          "alt": "brinde"
+        },
+        "normal": {
+          "url": "https://ecoms1.com/51491/imgs/normal/@v3/1723746264991-brinde.png.avif",
+          "size": "350x326",
+          "alt": "brinde"
+        }
+      },
+      "sku": "10",
+      "name": "Brinde",
+      "price": 0,
+      "final_price": 0,
+      "_id": "e590153a1726684426181111",
+      "stock_status": "unmanaged"
     }
   ],
+  "utm": {},
+  "browser_ip": "2804:3b34:521f:6600:2d54:cc8f:bcca:1b6",
+  "client_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0",
+  "channel_type": "ecommerce",
+  "domain": "www.festcakes.com.br",
+  "checkout_link": "https://www.festcakes.com.br/app/#/checkout/66eb1d0b9e4b2e07f510ca66",
+  "status_link": "https://www.festcakes.com.br/app/#/order/66eb1d0b9e4b2e07f510ca66",
   "amount": {
-    "subtotal": 367.26,
-    "discount": 0,
-    "freight": 27.94,
-    "total": 395.2
+    "subtotal": 554.64,
+    "discount": 27.73,
+    "freight": 32.34,
+    "extra": 0,
+    "total": 559.25
   },
   "shipping_lines": [
     {
-      "_id": "e15934561074061111111111",
+      "_id": "e970532a1726684426719111",
       "app": {
-        "_id": "5ef173d214ff772fde7ac45a",
-        "label": "PAC",
-        "carrier": "Correios",
-        "carrier_doc_number": "34028316000103",
-        "service_code": "04510",
-        "service_name": "PAC"
+        "_id": "669b0c94f4e6d85ab2d89165",
+        "label": "Retirar",
+        "carrier": "kangu",
+        "carrier_doc_number": "50154061000181",
+        "service_name": "R",
+        "service_code": "retira"
       },
       "from": {
-        "zip": "35701274"
+        "street": "AV PAPA JOAO XXIII",
+        "number": 2928,
+        "city": "maua",
+        "province_code": "SP",
+        "borough": "sertaozinho",
+        "zip": "09370800"
       },
       "to": {
-        "province_code": "MG",
-        "name": "Matheus",
-        "city": "Belo Horizonte"
+        "zip": "09520110",
+        "province_code": "SP",
+        "name": "Vitor Rocha Gonçalves",
+        "city": "São Caetano do Sul",
+        "borough": "Fundação",
+        "street": "Avenida Conde Francisco Matarazzo",
+        "number": 123
       },
-      "price": 21,
-      "declared_value": 367.26,
-      "declared_value_price": 6.94,
-      "own_hand": false,
-      "own_hand_price": 0,
-      "receipt": false,
-      "receipt_price": 0,
+      "price": 32.34,
+      "total_price": 32.34,
       "discount": 0,
-      "total_price": 27.94,
       "delivery_time": {
-        "days": 8,
+        "days": 5,
         "working_days": true
       },
+      "delivery_instructions": "CASOLOGICA - RUA SENADOR VERGUEIRO, 44 - Galpão, CENTRO, SÃO CAETANO DO SUL - 831.15m",
       "posting_deadline": {
-        "days": 3,
+        "days": 1,
         "working_days": true,
         "after_approval": true
       },
-      "flags": [
-        "correios-ws"
+      "package": {
+        "weight": {
+          "value": 12.152099999999999,
+          "unit": "kg"
+        }
+      },
+      "warehouse_code": "SP_FL1",
+      "custom_fields": [
+        {
+          "field": "kangu_reference",
+          "value": "kangu_R_30227267999877_2136987010_20047786000100"
+        },
+        {
+          "field": "nfe_required",
+          "value": "false"
+        }
       ],
-      "status": {
-        "updated_at": "2020-06-29T23:11:27.667Z",
-        "current": "ready_for_shipping"
-      }
+      "flags": [
+        "kangu-ws",
+        "kangu-R"
+      ],
+      "own_hand": false,
+      "receipt": false
     }
   ],
-  "shipping_method_label": "PAC",
-  "payment_method_label": "Boleto bancário",
+  "shipping_method_label": "Retirar",
+  "payment_method_label": "Pix",
+  "number": 9334,
   "staff_signature": false,
   "source_name": "Web",
-  "channel_type": "ecommerce",
   "status": "open",
   "currency_id": "BRL",
   "currency_symbol": "R$",
   "budget_only": false,
-  "number": 7084,
   "transactions": [
     {
-      "amount": 395.2,
-      "banking_billet": {
-        "text_lines": [
-          "Testando"
-        ],
-        "code": "1234 5678",
-        "link": "https://pagar.me",
-        "valid_thru": "2020-07-13T03:00:00.000Z"
+      "amount": 559.25,
+      "notes": "<div style=\"display:block;margin:0 auto\"> <img src=\"https://us-central1-ecom-braspag.cloudfunctions.net/app/qr-code?orderId=66eb1d0b9e4b2e07f510ca66\" style=\"display:block;margin:0 auto; width:150px;\"> <input readonly type=\"text\" id=\"pix-copy\" value=\"00020101021226860014BR.GOV.BCB.PIX2564qrpix.bradesco.com.br/qr/v2/9c2c76d7-07d9-4fde-9e40-deee84c40fa45204000053039865802BR5921VITOR ROCHA GONCALVES6004MAUA62290525Sf200002934000000000000006304A8C3\" /><button type=\"button\" class=\"btn btn-sm btn-light\" onclick=\"let codePix = document.getElementById('pix-copy')\n            codePix.select()\n            document.execCommand('copy')\">Copiar Pix</button></div>",
+      "status": {
+        "current": "pending",
+        "updated_at": "2024-09-18T18:33:46.208Z"
       },
       "intermediator": {
-        "payment_method": {
-          "code": "boleto"
-        },
-        "transaction_id": "9084544",
-        "transaction_code": "9084544",
-        "buyer_id": "3351913"
-      },
-      "payment_link": "https://pagar.me",
-      "status": {
-        "updated_at": "2020-06-29T23:10:56.690Z",
-        "current": "paid"
+        "transaction_id": "487e1e77-2049-4e76-949f-afb6b9c0c953"
       },
       "type": "payment",
       "payment_method": {
-        "code": "banking_billet",
-        "name": "Boleto bancário - Pagar.me"
+        "code": "account_deposit",
+        "name": "Pix - Braspag"
       },
+      "currency_id": "BRL",
+      "currency_symbol": "R$",
       "app": {
-        "_id": "5ea759535ac4060578b65692",
-        "label": "Boleto bancário",
+        "_id": "65a7c8532cd6b65959061e52",
+        "label": "Pix",
         "intermediator": {
-          "name": "Pagar.me",
-          "link": "https://pagar.me/",
-          "code": "pagarme"
+          "name": "Braspag",
+          "link": "https://braspag.github.io/",
+          "code": "braspag"
         }
       },
-      "_id": "5efa35ed14ff772fde7bde58"
-    }
-  ],
-  "payments_history": [
-    {
-      "transaction_id": "5efa35ed14ff772fde7bde58",
-      "date_time": "2020-06-29T18:41:49.118Z",
-      "status": "pending",
-      "flags": [
-        "cpm-skip",
-        "cpm"
-      ],
-      "customer_notified": false,
-      "_id": "5efa35f814ff772fde7bde67"
-    },
-    {
-      "status": "pending",
-      "date_time": "2020-06-29T18:41:49.118Z",
-      "flags": [
-        "cpm-skip",
-        "checkout"
-      ],
-      "customer_notified": true,
-      "_id": "5efa35ed14ff772fde7bde5a"
-    },
-    {
-      "date_time": "2020-06-29T18:41:49.633Z",
-      "status": "pending",
-      "notification_code": "cf0de38b8ccc94b585393bbc451d0498b09b571c",
-      "flags": [
-        "cpm-skip",
-        "cpm:patch",
-        "pagarme",
-        "old:processing"
-      ],
-      "transaction_id": "5efa35ed14ff772fde7bde58",
-      "customer_notified": false,
-      "_id": "5efa35ed14ff772fde7bde5c"
-    },
-    {
-      "status": "paid",
-      "date_time": "2020-06-29T23:10:56.690Z",
-      "flags": [
-        "cpm:patch",
-        "cpm:post"
-      ],
-      "customer_notified": true,
-      "_id": "5efa750014ff772fde7bf942"
+      "_id": "66eb1d0d9e4b2e07f510ca7d"
     }
   ],
   "financial_status": {
-    "updated_at": "2020-06-29T23:10:56.690Z",
-    "current": "paid"
+    "current": "pending",
+    "updated_at": "2024-09-18T18:33:46.208Z"
   },
+  "payments_history": [
+    {
+      "_id": "e482323a1726684429744111",
+      "transaction_id": "66eb1d0d9e4b2e07f510ca7d",
+      "status": "pending",
+      "date_time": "2024-09-18T18:33:46.208Z",
+      "flags": [
+        "checkout"
+      ]
+    },
+    {
+      "transaction_id": "66eb1d0d9e4b2e07f510ca7d",
+      "date_time": "2024-09-18T18:33:46.208Z",
+      "status": "pending",
+      "flags": [
+        "cpm"
+      ],
+      "customer_notified": true,
+      "_id": "66eb1d169e4b2e07f510caab"
+    }
+  ],
+  "metafields": [
+    {
+      "namespace": "fb",
+      "field": "pixel",
+      "value": "{\"eventID\":\"9334:r8\",\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0\"}",
+      "_id": "66eb1d0f9e4b2e07f510ca86"
+    }
+  ],
   "fulfillment_status": {
-    "updated_at": "2020-06-29T23:11:27.667Z",
-    "current": "ready_for_shipping"
+    "current": "ready_for_shipping",
+    "flags": [
+      "__ready_for_shipping",
+      "__1726684519282"
+    ],
+    "updated_at": "2024-09-18T18:35:19.282Z"
   },
   "fulfillments": [
     {
+      "date_time": "2024-09-18T18:35:19.282Z",
       "status": "ready_for_shipping",
-      "date_time": "2020-06-29T23:11:27.667Z",
       "flags": [
-        "cpm:patch",
-        "cpm:post"
+        "__1726684519282"
       ],
       "customer_notified": true,
-      "_id": "5efa751f14ff772fde7bf94f"
+      "_id": "66eb1d679e4b2e07f510cbc0"
     }
   ]
 }
