@@ -23,6 +23,42 @@ const render = require('./lib/render')
 module.exports = {
 
   /**
+     * @method
+     * @memberof transactionalMails
+     * @description Returns HTML markup for a generic email.
+     * @param {object} store - Store body object
+     * @param {object} message - Message object with email content
+     * @param {string} message.title - Email title/headline
+     * @param {string} [message.subtitle] - Optional subtitle below the title
+     * @param {string} [message.body] - Main message body text (may have HTML tags)
+     * @param {string} [message.button_text] - Text for the call-to-action button
+     * @param {string} [message.button_link] - URL for the call-to-action button
+     * @param {string} [lang='en_us'] - Snake case language code, eg.: 'en_us', 'pt_br'
+     * @returns {Promise}
+     *
+     * @example
+
+  const message = {
+    "title": "Olá",
+    "subtitle": "Subtítulo",
+    "body": "Texto <b>bold</b>",
+    "button_text": "Comprar",
+    "button_link": "https://www.ecomplus.io/"
+  }
+  transactionalMails.generic(store, message, 'pt_br')
+    .then(html => sendEmail(html, options))
+    .catch(err => console.error(err))
+
+     */
+
+    generic (store, message, lang) {
+      return render('generic', {
+        ...message,
+        store
+      }, store, lang)
+    },
+
+  /**
    * @method
    * @memberof transactionalMails
    * @description Returns HTML markup for customer welcome email.
