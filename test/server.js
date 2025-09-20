@@ -27,7 +27,8 @@ const {
   receivedForExchange,
   returned,
   stock,
-  new_order
+  new_order,
+  generic,
 } = require('./../src/')
 
 // sample JSON data
@@ -36,6 +37,7 @@ const customer = require('./data/customer.json')
 const cart = require('./data/cart.json')
 const order = require('./data/order.json')
 const product = require('./data/product.json')
+const message = require('./data/message.json')
 
 // setup dev server with BrowserSync
 const browserSync = require('browser-sync').create()
@@ -247,6 +249,14 @@ browserSync.init({
       route: '/returned',
       handle (req, res, next) {
         returned(store, customer, order, 'pt_br')
+          .then(html => res.end(html))
+          .catch(err => console.error(err))
+      }
+    },
+    {
+      route: '/generic',
+      handle (req, res, next) {
+        generic(store, message, 'pt_br')
           .then(html => res.end(html))
           .catch(err => console.error(err))
       }
