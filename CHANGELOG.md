@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/ecomplus/transactional-mails/compare/v2.1.0...v2.2.0) (2025-09-20)
+
+
+### Features
+
+* add generic email template with configurable message properties ([7edcc99](https://github.com/ecomplus/transactional-mails/commit/7edcc998a827b2a454169309ca8478930fb55f65))
+
 ## [2.1.0](https://github.com/ecomplus/transactional-mails/compare/v2.0.4...v2.1.0) (2024-09-18)
 
 
