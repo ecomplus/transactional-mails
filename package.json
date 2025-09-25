@@ -34,7 +34,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
-    "browser-sync": "^2.29.3",
+    "browser-sync": "^3.0.4",
     "docdash": "^2.0.1",
     "husky": "^8.0.3",
     "jsdoc": "^4.0.2",
