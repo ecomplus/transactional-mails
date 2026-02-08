@@ -32,8 +32,8 @@
     "sass": "^1.66.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/cli": "^20.4.1",
+    "@commitlint/config-conventional": "^20.4.1",
     "browser-sync": "^2.29.3",
     "docdash": "^2.0.1",
     "husky": "^8.0.3",
