@@ -88,7 +88,7 @@
                                                 <font color="#333333"><%= i18n.delivering_in %> <strong>
                                                     <%= shipping.delivery_time.days %>
                                                     <% if (shipping.delivery_time.working_days) { %>
-                                                    <%= i18n.working_days %> <% } else{ %> <%= i18n.days %>
+                                                    <%= shipping.delivery_time.days === 1 ? i18n.working_day : i18n.working_days %> <% } else{ %> <%= shipping.delivery_time.days === 1 ? i18n.day : i18n.days %>
                                                     <% } %></strong> <%= i18n.on_following_address %> </font>
                                               </div>
 

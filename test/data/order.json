@@ -144,18 +144,18 @@
       "_id": "e970532a1726684426719111",
       "app": {
         "_id": "669b0c94f4e6d85ab2d89165",
-        "label": "Retirar",
-        "carrier": "kangu",
-        "carrier_doc_number": "50154061000181",
-        "service_name": "R",
-        "service_code": "retira"
+        "label": "Transportadora",
+        "carrier": "Correios",
+        "carrier_doc_number": "34028316000103",
+        "service_name": "PAC",
+        "service_code": "pac"
       },
       "from": {
         "street": "AV PAPA JOAO XXIII",
         "number": 2928,
-        "city": "maua",
+        "city": "Mauá",
         "province_code": "SP",
-        "borough": "sertaozinho",
+        "borough": "Sertãozinho",
         "zip": "09370800"
       },
       "to": {
@@ -174,9 +174,8 @@
         "days": 5,
         "working_days": true
       },
-      "delivery_instructions": "CASOLOGICA - RUA SENADOR VERGUEIRO, 44 - Galpão, CENTRO, SÃO CAETANO DO SUL - 831.15m",
       "posting_deadline": {
-        "days": 1,
+        "days": 3,
         "working_days": true,
         "after_approval": true
       },
@@ -187,25 +186,14 @@
         }
       },
       "warehouse_code": "SP_FL1",
-      "custom_fields": [
-        {
-          "field": "kangu_reference",
-          "value": "kangu_R_30227267999877_2136987010_20047786000100"
-        },
-        {
-          "field": "nfe_required",
-          "value": "false"
-        }
-      ],
       "flags": [
-        "kangu-ws",
-        "kangu-R"
+        "correios-pac"
       ],
       "own_hand": false,
       "receipt": false
     }
   ],
-  "shipping_method_label": "Retirar",
+  "shipping_method_label": "PAC",
   "payment_method_label": "Pix",
   "number": 9334,
   "staff_signature": false,

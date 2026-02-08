@@ -168,19 +168,20 @@
                                                   <strong>
                                                     <%= shipping.posting_deadline && shipping.posting_deadline.days %>
                                                     <% if (shipping.posting_deadline && shipping.posting_deadline.working_days) { %>
-                                                    <%= i18n.working_days %>
+                                                    <%= shipping.posting_deadline.days === 1 ? i18n.working_day : i18n.working_days %>
                                                     <% } else { %>
-                                                    <%= i18n.days %>
+                                                    <%= shipping.posting_deadline.days === 1 ? i18n.day : i18n.days %>
                                                     <% } %>
                                                   </strong>
-                                                  <%= i18n.and %>
+                                                  ,
                                                   <%= i18n.delivering_in %>
                                                   <strong>
-                                                    <%= shipping.delivery_time && shipping.delivery_time.days %>
+                                                    <% var _totalDays = (shipping.delivery_time ? shipping.delivery_time.days : 0) + (shipping.posting_deadline ? shipping.posting_deadline.days : 0) %>
+                                                    <%= _totalDays %>
                                                     <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
-                                                    <%= i18n.working_days %>
+                                                    <%= _totalDays === 1 ? i18n.working_day : i18n.working_days %>
                                                     <% } else { %>
-                                                    <%= i18n.days %>
+                                                    <%= _totalDays === 1 ? i18n.day : i18n.days %>
                                                     <% } %>
                                                   </strong>
 
