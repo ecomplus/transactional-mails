@@ -126,7 +126,7 @@
                                                       </font>
                                                     </div>
                                                   </td>
-                                                  <% } else if (shipping.delivery_time.days == 0) { %>
+                                                  <% } else if (shipping.delivery_time && shipping.delivery_time.days == 0) { %>
                                                     <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;"
                                                       height="100%" valign="top" bgcolor="">
                                                       <div style="text-align: center;">
@@ -171,9 +171,9 @@
                                                   <strong>
                                                     <%= shipping.posting_deadline && shipping.posting_deadline.days %>
                                                     <% if (shipping.posting_deadline && shipping.posting_deadline.working_days) { %>
-                                                    <%= shipping.posting_deadline.days === 1 ? i18n.working_day : i18n.working_days %>
+                                                    <%= (shipping.posting_deadline && shipping.posting_deadline.days === 1) ? i18n.working_day : i18n.working_days %>
                                                     <% } else { %>
-                                                    <%= shipping.posting_deadline.days === 1 ? i18n.day : i18n.days %>
+                                                    <%= (shipping.posting_deadline && shipping.posting_deadline.days === 1) ? i18n.day : i18n.days %>
                                                     <% } %>
                                                   </strong>
                                                   ,
