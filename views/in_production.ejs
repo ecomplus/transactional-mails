@@ -89,6 +89,7 @@ if (order.status_link) {
                                           <tr>
 
                                             <% order.shipping_lines.forEach(shipping => {%>
+                                            <% var _deadlines = shippingDeadlines(shipping) %>
 
                                               <% if (order.shipping_method_label && order.shipping_method_label.includes("etirar")) { %>
                                                 <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;"
@@ -101,15 +102,7 @@ if (order.status_link) {
                                                       </a>
 
                                                       <%= i18n.available_pickup %>
-                                                      <strong>
-                                                        <% var _pickupDays = (shipping.delivery_time ? shipping.delivery_time.days : 0) + (shipping.posting_deadline ? shipping.posting_deadline.days : 0) %>
-                                                        <%= _pickupDays %>
-                                                        <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
-                                                        <%= _pickupDays === 1 ? i18n.working_day : i18n.working_days %>
-                                                        <% } else { %>
-                                                        <%= _pickupDays === 1 ? i18n.day : i18n.days %>
-                                                        <% } %>
-                                                      </strong>
+                                                      <% if (_deadlines.total) { %><strong><%= _deadlines.total %></strong><% } %>
                                                     </font>
                                                   </div>
                                                 </td>
@@ -126,20 +119,12 @@ if (order.status_link) {
                                                         </a>
 
                                                         <%= i18n.will_mail %>
-                                                        <strong>
-                                                          <% var _mailDays = (shipping.delivery_time ? shipping.delivery_time.days : 0) + (shipping.posting_deadline ? shipping.posting_deadline.days : 0) %>
-                                                          <%= _mailDays %>
-                                                          <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
-                                                          <%= _mailDays === 1 ? i18n.working_day : i18n.working_days %>
-                                                          <% } else { %>
-                                                          <%= _mailDays === 1 ? i18n.day : i18n.days %>
-                                                          <% } %>
-                                                        </strong>
+                                                        <% if (_deadlines.total) { %><strong><%= _deadlines.total %></strong><% } else { %><%= i18n.soon %><% } %>
                                                       </font>
                                                     </div>
                                                   </td>
 
-                                                  <% } else if (shipping.delivery_time.days == 0) { %>
+                                                  <% } else if (shipping.delivery_time && shipping.delivery_time.days == 0) { %>
                                                     <td style="padding:10px 50px 10px 50px;line-height:22px;text-align:inherit;"
                                                       height="100%" valign="top" bgcolor="">
                                                       <div style="text-align: center;">

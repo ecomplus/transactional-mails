@@ -99,34 +99,29 @@
                                           <tr>
 
                                             <% order.shipping_lines.forEach(shipping => { %>
+                                            <% var _deadlines = shippingDeadlines(shipping) %>
 
                                             <td style="padding:0px 10px 30px 10px;line-height:22px;text-align:inherit;"
                                               height="100%" valign="top" bgcolor="">
 
                                               <div style="padding:0px 45px 0px 45px;text-align: center;">
                                                 <font color="#333333">
-                                                  <% if (shipping.posting_deadline) { %>
                                                   <div style="text-align: center;">
-                                                    <font color="#333333"><%= i18n.posting_in %> <strong>
-                                                        <%= shipping.posting_deadline && shipping.posting_deadline.days %>
-                                                        <% if (shipping.posting_deadline && shipping.posting_deadline.working_days) { %>
-                                                        <%= shipping.posting_deadline.days === 1 ? i18n.working_day : i18n.working_days %> <% } else{ %> <%= shipping.posting_deadline.days === 1 ? i18n.day : i18n.days %>
-                                                        <% } %></strong>,
-                                                      <%= i18n.delivering_in %> <strong>
-                                                        <% var _totalDays = (shipping.delivery_time ? shipping.delivery_time.days : 0) + shipping.posting_deadline.days %>
-                                                        <%= _totalDays %>
-                                                        <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
-                                                        <%= _totalDays === 1 ? i18n.working_day : i18n.working_days %> <% } else{ %> <%= _totalDays === 1 ? i18n.day : i18n.days %>
-                                                        <% } %></strong> <%= i18n.after_payment %>
-                                                      <%= i18n.following_address %> </font>
+                                                    <font color="#333333">
+                                                      <% if (_deadlines.posting) { %>
+                                                      <%= i18n.posting_in %>
+                                                      <strong><%= _deadlines.posting %></strong>,
+                                                      <% } %>
+                                                      <% if (_deadlines.total) { %>
+                                                      <%= i18n.delivering_in %>
+                                                      <strong><%= _deadlines.total %></strong>
+                                                      <% } else { %>
+                                                      <%= i18n.will_be_delivered %>
+                                                      <% } %>
+                                                      <%= i18n.after_payment %>
+                                                      <%= i18n.following_address %>
+                                                    </font>
                                                   </div>
-                                                  <% } else{ %>
-                                                  <%= i18n.delivering_in %> <strong> <%= shipping.delivery_time && shipping.delivery_time.days %>
-                                                    <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
-                                                    <%= (shipping.delivery_time.days === 1) ? i18n.working_day : i18n.working_days %> <% } else{ %> <%= (shipping.delivery_time.days === 1) ? i18n.day : i18n.days %>
-                                                    <% } %></strong> <%= i18n.after_payment %>
-                                                  <%= i18n.on_following_address %>
-                                                  <% } %>
                                                 </font>
                                               </div>
                                               <br>
