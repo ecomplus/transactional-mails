@@ -12,6 +12,8 @@ const sass = require('sass')
 // E-Com Plus utility methods
 // https://developers.e-com.plus/ecomplus-utils/
 const ecomUtils = require('@ecomplus/utils')
+// shipping deadlines formatter for order templates
+const shippingDeadlines = require('./shipping-deadlines')
 
 require('intl')
 if (global.Intl) {
@@ -75,8 +77,12 @@ module.exports = (template, data = {}, store, lang) => {
 
           // save CSS on template data
           data.css = result.css.toString()
-          // complete template params with `themeColor` and `ecomUtils`
-          Object.assign(data, { themeColor, ecomUtils })
+          // complete template params with `themeColor`, `ecomUtils` and helpers
+          Object.assign(data, {
+            themeColor,
+            ecomUtils,
+            shippingDeadlines: shippingDeadlines(data.i18n)
+          })
 
           // render EJS file to HTML
           const view = path.join(__dirname, `../../views/${template}.ejs`)

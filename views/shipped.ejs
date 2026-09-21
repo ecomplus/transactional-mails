@@ -92,7 +92,7 @@
                                               <% } else { %>
                                               <h2><span style="color:#333333;"><%= i18n.hello %>
                                                   <%= customer.name && customer.name.given_name %>, 
-                                                  <% if (order.shipping_method_label && order.shipping_method_label.includes("Retirar")) { %>
+                                                  <% if (order.shipping_method_label && order.shipping_method_label.includes("etirar")) { %>
                                                     <%= i18n.shipped_title_pickup %>
                                                   <% } else { %>
                                                   <%= i18n.shipped_title %>
@@ -110,6 +110,7 @@
                                           <tr>
 
                                             <% order.shipping_lines.forEach(shipping => { %>
+                                            <% var _deadlines = shippingDeadlines(shipping) %>
 
                                             <td style="padding:0px 10px 30px 10px;line-height:22px;text-align:inherit;"
                                               height="100%" valign="top" bgcolor="">
@@ -143,20 +144,18 @@
 
                                               <div style="text-align: center;">
                                                 <font color="#333333">
-                                                  <% if (order.shipping_method_label && order.shipping_method_label.includes("Retirar")) { %>
+                                                  <% if (order.shipping_method_label && order.shipping_method_label.includes("etirar")) { %>
                                                     <%= i18n.shipped_text_pickup %>
+                                                    <% if (_deadlines.delivery) { %><strong><%= _deadlines.delivery %></strong><% } else { %><%= i18n.soon %><% } %>
                                                   <% } else { %>
-                                                  <%= i18n.shipped_text %> <%= i18n.delivering_in %>
+                                                    <%= i18n.shipped_text %>
+                                                    <% if (_deadlines.delivery) { %><%= i18n.delivering_in %> <strong><%= _deadlines.delivery %></strong><% } else { %><%= i18n.will_be_delivered %><% } %>
                                                   <% } %>
-                                                   <strong> <%= shipping.delivery_time && shipping.delivery_time.days %>
-                                                    <% if (shipping.delivery_time && shipping.delivery_time.working_days) { %>
-                                                    <%= (shipping.delivery_time && shipping.delivery_time.days === 1) ? i18n.working_day : i18n.working_days %> <% } else { %> <%= (shipping.delivery_time && shipping.delivery_time.days === 1) ? i18n.day : i18n.days %>
-                                                    <% } %></strong> 
                                                     <br>
                                                   <% if (shipping.delivery_instructions) { %>
                                                     <strong><%= shipping.delivery_instructions %></strong>
                                                  <% } %>
-                                                 <% if (order.shipping_method_label && !order.shipping_method_label.includes("Retirar")) { %>
+                                                 <% if (order.shipping_method_label && !order.shipping_method_label.includes("etirar")) { %>
                                                     <%= i18n.on_following_address %>
                                                  <% } %>
                                                 </font>
@@ -164,7 +163,7 @@
 
                                               <br>
 
-                                            <% if (order.shipping_method_label && !order.shipping_method_label.includes("Retirar")) { %>
+                                            <% if (order.shipping_method_label && !order.shipping_method_label.includes("etirar")) { %>
                                               <div style="text-align: center;">
                                                 <font color="#333333"><%= shipping.to && shipping.to.street %>, nº
                                                   <%= shipping.to.number %></font>
