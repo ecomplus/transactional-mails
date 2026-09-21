@@ -1,6 +1,14 @@
 name: Publish
 
-on: registry_package
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Tag to publish (eg.: v2.2.3), defaults to the selected ref'
+        required: false
+        type: string
 
 jobs:
   publish:
@@ -9,12 +17,14 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.ref }}
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '12.x'
+          node-version: '20.x'
           registry-url: 'https://registry.npmjs.org/'
 
       - name: Edit package.json to remove custom registry config
