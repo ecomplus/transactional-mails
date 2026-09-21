@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.3](https://github.com/ecomplus/transactional-mails/compare/v2.2.2...v2.2.3) (2026-09-21)
+
+
+### Bug Fixes
+
+* guard delivery_time/posting_deadline access in order email templates ([6b8747a](https://github.com/ecomplus/transactional-mails/commit/6b8747adc9e176454848fdf1f272bc277f2306a8))
+* skip shipping deadline sentences when delivery_time/posting_deadline are missing ([5eef13c](https://github.com/ecomplus/transactional-mails/commit/5eef13c0001a6e8b948972dee2449c8834945b57))
+
 ### [2.2.2](https://github.com/ecomplus/transactional-mails/compare/v2.2.1...v2.2.2) (2026-02-08)
 
 
